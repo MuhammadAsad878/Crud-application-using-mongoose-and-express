@@ -1,0 +1,39 @@
+<%- layout('boilerplate.ejs') %>
+
+<body>
+  <div class="row">
+    <% for(let std of students){ %>
+    <!-- image -->
+    <div class="card col-lg-3 col-md-4 col-sm-12 p-2 m-3" style="width: 18rem">
+      <img
+        src="/upload/user (3).png"
+        class="card-img-top cardImage"
+        alt="Profile Image <%= std.name %>"
+        title="<%= std.name %>"
+      />
+
+      <!-- heading -->
+      <div class="card-body">
+        <h4 class="card-title"><%= std.name %></h4>
+      </div>
+      <!-- data -->
+      <div class="p-2">
+        <li>Roll No : <%= std.rollNo %></li>
+        <li>Section : <%= std.section %></li>
+        <li class="department" title="<%= std.department %>">Department : <%= std.department.toString().slice(0,19) %> <%= std.department.toString().length > 19 ? '....': ""  ;%></li>
+        <li>Semester : <%= std.semester %><sup>th</sup></li>
+      </div>
+
+      <div class="card-body card-buttons">
+        <form action="/student/<%=std.id %>?_method=put" method="post">
+          <button class="btn btn-primary">Update</button>
+        </form>
+
+        <form action="/student/<%=std.id%>?_method=delete" method="post">
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</body>

@@ -1,0 +1,37 @@
+{
+  "name": "mongoosecrudwithexpress",
+  "version": "1.0.0",
+  "description": "Crud application using mongoose and express",
+  "main": "index.js",
+  "scripts": {
+    "test": "start app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MuhammadAsad878/Crud-application-using-mongoose-and-express.git"
+  },
+  "keywords": [
+    "CRUD",
+    "Express",
+    "Mongoose",
+    "mongoose",
+    "crud",
+    "express"
+  ],
+  "author": "Muhammad Asad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MuhammadAsad878/Crud-application-using-mongoose-and-express/issues"
+  },
+  "homepage": "https://github.com/MuhammadAsad878/Crud-application-using-mongoose-and-express#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "ejs-mate": "^4.0.0",
+    "express": "^4.21.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.7.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.7",
+    "path": "^0.12.7"
+  }
+}

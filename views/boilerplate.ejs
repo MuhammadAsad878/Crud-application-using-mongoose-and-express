@@ -1,0 +1,91 @@
+<%- include('head.ejs')  %>
+
+  <body class="light" data-bs-theme="">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" class="logo"
+          ><img
+            src="https://w7.pngwing.com/pngs/956/695/png-transparent-mongodb-original-wordmark-logo-icon-thumbnail.png"
+            alt=""
+            class="image"
+        /></a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        ></button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <h2>MongoDb-CRUD-Using-Express</h2>
+          </ul>
+          <button class="btn " id="new-btn"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" title="Add new student"> New Student <i class="fa-solid fa-user-plus"></i></button>
+
+          <form
+            class="d-flex"
+            action="/search"
+            id="searchForm"
+            role="search"
+            method="get"
+          >
+            <a href="/students">
+              <button class="btn mx-2" id="refresh-btn"  type="button"><i class="fa-solid fa-arrows-rotate"></i></button
+            ></a>
+
+            <input
+              class="form-control me-2"
+              type="search"
+              id="searchInput"
+              name="search_query"
+              placeholder="Search"
+              aria-label="Search"
+              title="Data to Search"
+            />
+            <button class="btn btn-outline-success" type="submit" title="search">
+              Search
+            </button>
+          </form>
+          <button id="changeThemeBtn"><i class="fa-solid fa-circle-half-stroke"></i></button>
+        </div>
+      </div>
+    </nav>
+   
+    <!-- off canvas with New Student form -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h4 class="offcanvas-title" id="offcanvasExampleLabel">Add New Student <i class="fa-solid fa-plus" id="plus-icon"></i></h4>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <form action="/student" id="newDataForm" method="post" class="row offset-4">
+          <h6 class="form-title col-5">Enter New Student</h6>
+          <label for="name">Name</label>
+          <input class="student-data col-5" id="stdName" type="text" name="name" placeholder="Name" required autofocus>
+          <label for="name">Roll-No</label>
+          <input class="student-data col-5" id="rollNo" type="text" name="rollNo" placeholder="Roll No" required>
+          <label for="name">Section</label>
+          <input class="student-data col-5" id="section"type="text" name="section" placeholder="Section" required>
+          <label for="name">Department</label>
+          <input class="student-data col-5" id="department"type="text" name="department" placeholder="Department">
+          <label for="name">Semester</label>
+          <input class="student-data col-5" id="semester" type="number" min="1" max="8" name="semester" placeholder=" Semester" required>
+          <label for=""></label>
+          <button class="student-data col-5 btn btn-primary" id="newBtn">Submit</button>
+        </form>
+      </div>
+    </div>
+    <div class="container"><%- body %></div>
+
+    <script src="/script/boilerplate.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

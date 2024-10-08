@@ -1,0 +1,115 @@
+.image {
+  height: 50px;
+  object-fit: contain;
+  background-size: contain;
+}
+.navbar {
+  height: 7rem;
+}
+.card {
+  width: 20rem !important;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 4px rgb(190, 190, 190);
+  color: black;
+  border-radius: 15px;
+  padding: 10px 4px 10px 19px !important;
+  opacity: 0.9;
+
+}
+.card:hover{
+  opacity: 1;
+  cursor: pointer;
+  box-shadow: 0px 0px 6px rgb(190, 190, 190);
+}
+.cardImage {
+  position: relative;
+  left: 4rem;
+  height: 140px;
+  width: 140px;
+  border-radius: 100px;
+  background-color: lightblue;
+  border: solid 2px black;
+  background-size: contain;
+  padding: 19px;
+  margin-top: 10px;
+
+}
+.card-buttons {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.card-buttons form button {
+  margin: 0px 5px 0px 5px;
+}
+
+#refresh-btn {
+  font-size: 1.5rem;
+  border-radius: 40px;
+  background-size: cover;
+  opacity: 0.9;
+}
+#refresh-btn:active {
+  border: none;
+  transform: scale(1.05);
+  opacity: 1;
+}
+#new-btn{
+  box-shadow: 0px 1px 4px black;
+  height: 50px;
+  background-color: lightcyan;
+  border: solid 2px rgb(234, 234, 234);
+  color: black;
+  border-radius: 20px;
+  padding: 2px 7px;
+  margin: 2px;
+}
+.fa-user-plus{
+  height: 20px;
+  color: black;
+}
+#new-btn:hover{
+  border:solid 4px lightcyan;
+  background-color: white;
+  ;
+}
+.offcanvas{
+  width: 100% !important;
+}
+.student-data{
+  padding: 7px;
+  margin:4px 6px;
+}
+.form-title{
+  text-align: center;
+  font-size: large;
+}
+#changeThemeBtn{
+  height: 40px;
+  width: 40px;
+  margin: 5px;
+  padding: 3px;
+  border: none;;
+  border-radius: 40px;
+  opacity: 0.8;
+}
+#changeThemeBtn:hover{
+  opacity: 1;
+}
+input:invalid{
+  caret-color: red; /* Change this color to whatever you prefer */
+  caret-shape:underscore !important;
+  
+}
+#plus-icon{
+font-size: 1rem;
+  border-radius: 20px;
+  border: solid 1px black;
+  ;
+}
+label{
+  font-size: 1.2rem;
+  margin-left: 0px;
+  padding-left: 3px !important;
+}
+
