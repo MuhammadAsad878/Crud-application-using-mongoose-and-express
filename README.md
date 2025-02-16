@@ -41,8 +41,8 @@ This will start the **Express server**.
 ### 3. Access the Application
 - Open your web browser and navigate to:
   
-  ```
-http://localhost:3000/students
+  ```http://localhost:3000/students
+
   ```
   
   (or the specified port in your configuration) to access the application index route.
